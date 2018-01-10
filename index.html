@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Because Of You</title>
+
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+
+</head>
+
+<body>
+<EMBED SRC="zwnpy.mp3" autostart=true hidden=true loop=true>
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			<span class="comments">/**</span><br />
+			<span class="space"/><span class="comments">*2018—01-10</span><br />
+			<span class="space"/><span class="comments">*/</span><br />
+			</span>方赫<br />
+			<span class="comments">//我偷偷告诉你一些秘密 </span><br />
+			<span class="comments">//我很想和你有长久的未来</span><br />
+			<span class="comments">//很想把所有好东西都给你</span><br />
+			<span class="comments">//很想肆无忌惮的爱你</span><br />
+			<span class="comments">//很想每天跟你在一起</span><br />
+			<span class="comments">//很想你也同样依赖我</span><br />
+			<span class="comments">//很想打开手机就看到你的讯息</span><br />
+			<span class="comments">//很想清晨夜晚的第一眼都是你</span><br />
+			<span class="comments">//很想牵着你的手敬各位来宾一杯酒</span><br />
+			<span class="comments">//很想得到所有人的祝福</span><br />
+			<span class="comments">//很想陪你走完你的一生</span><br />
+
+			<br>
+			<br>
+			I want to say:<br />
+			Fang He, I love you is not a joke;<br />
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					<img src="fh.jpg" alt="" id="fh">
+				</div>
+				<div id="loveu">
+					I want to be with you<br/>
+					<div class="signature">- Fang He</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+together.setFullYear(2010, 2, 14);
+together.setHours(20);
+together.setMinutes(0);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+</script>
+<div style="text-align:center;clear:both">
+<!-- <p>适用浏览器：360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗. 不支持IE8及以下浏览器。</p> -->
+<!-- <p>来源：<a href="http://sc.chinaz.com/" target="_blank">站长素材</a></p> -->
+</div>
+</body>
+</html>
